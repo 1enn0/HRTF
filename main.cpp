@@ -141,28 +141,24 @@ int main (int argc, char** argv)
 
         if(b[0]){
             x -= step;
-            std::cout << "x: " << x << "   z: " << z << "   y: " << y << std::endl;
         }
         if(b[1]){
             x += step;
-            std::cout << "x: " << x << "   z: " << z << "   y: " << y << std::endl;
         }
         if(b[2]){
             z -= step;
-            std::cout << "x: " << x << "   z: " << z << "   y: " << y << std::endl;
         }
         if(b[3]){
             z += step;
-            std::cout << "x: " << x << "   z: " << z << "   y: " << y << std::endl;;
         }
         if(b[4]){
             y += step;
-            std::cout << "x: " << x << "   z: " << z << "   y: " << y << std::endl;
         }
         if(b[5]){
             y -= step;
-            std::cout << "x: " << x << "   z: " << z << "   y: " << y << std::endl;
         }
+
+        std::cout << "source position   " << "x: " << x << "   z: " << z << "   y: " << y << std::endl;
 
         // update position
         source1.Position(x, y, z);
