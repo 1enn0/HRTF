@@ -22,10 +22,9 @@ keyboard shortcuts
 initial values (xyz)
 ====================
 
-source position: (0/0/-5)
-
-listener position: (0/0/0)
-listener orientation: (0/0/-1) (facing negative z-axis)
+source   position:      ( 0, 0, -5 )
+listener position:      ( 0, 0,  0 )
+listener orientation:   ( 0, 0, -1 ) (facing negative z-axis)
 */
 
 #include <iostream>
@@ -56,18 +55,11 @@ int main (int argc, char** argv)
 
 
     // create and configure source 1
-    oalplus::Buffer buffer1 = alut.CreateBufferFromFile("/home/lenno/openal_sandbox/pn.wav");
+    oalplus::Buffer buffer1 = alut.CreateBufferFromFile("/home/lenno/openal_sandbox/pn.wav"); // you will have to edit the path here
     oalplus::Source source1;
     source1.Buffer(buffer1);
     source1.Looping(true);
 
-
-    // create and configure source 2
-//    oalplus::Buffer buffer2 = alut.CreateBufferFromFile("/home/lenno/openal_sandbox/SignalD_norm.wav");
-//    oalplus::Source source2;
-//    source2.Buffer(buffer2);
-//    source2.Looping(true);
-//    source2.Position(10.0f, 0.0f, 0.0f);
 
     SDL_Init(SDL_INIT_EVERYTHING);
     SDL_Surface* screen = SDL_SetVideoMode(640, 480, 32, SDL_SWSURFACE);
@@ -116,11 +108,7 @@ int main (int argc, char** argv)
                     break;
                 case SDLK_SPACE:
                     source1.Pause();
-//                    source2.Pause();
                     break;
-//                case SDLK_2:
-//                    source2.Play();
-//                    break;
                 }
                 break;
             case SDL_KEYUP:
